@@ -1,0 +1,14 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "cloudant": {
+    "url": "https://cfa99d34-e0c7-4bb9-9d6f-7cce4ae7c6a8-bluemix:5f48e59630aff00a9e596955ebf674570b5ee09eca8ed53579e9d6c023c2ad3e@cfa99d34-e0c7-4bb9-9d6f-7cce4ae7c6a8-bluemix.cloudant.com",
+    "database": "exemplo-baseline",
+    "username": "cfa99d34-e0c7-4bb9-9d6f-7cce4ae7c6a8-bluemix",
+    "password": "5f48e59630aff00a9e596955ebf674570b5ee09eca8ed53579e9d6c023c2ad3e",
+    "name": "cloudant",
+    "connector": "cloudant"
+  }
+}

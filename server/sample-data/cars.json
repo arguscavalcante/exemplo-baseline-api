@@ -1,0 +1,58 @@
+[
+  {
+    "id": "65ccb5e4-0af3-4faf-a032-78184146a431",
+    "vin": "07bd4d5c-33e8-49e4-b534-58c22a776f7a",
+    "dealerId": "e9429717-a670-4ba1-885c-c11a3c222d98",
+    "year": "2013",
+    "make": "Nissan",
+    "model": "Titan",
+    "image": "/images/car/car_3.jpg",
+    "carClass": "fullsize",
+    "color": "green"
+  },
+  {
+    "id": "5d1bac68-cd8c-4158-a997-df11a840e721",
+    "vin": "d87265a9-531e-4fa2-b259-470e478ce517",
+    "dealerId": "e9429717-a670-4ba1-885c-c11a3c222d98",
+    "year": "2013",
+    "make": "Nissan",
+    "model": "Avalon",
+    "image": "/images/car/car_4.jpg",
+    "carClass": "midsize",
+    "color": "green"
+  },
+  {
+    "id": "757c1457-10e0-4274-bec3-0899d81600b9",
+    "vin": "d7e7088a-2e19-4634-8fe9-b17126c8f786",
+    "dealerId": "e9429717-a670-4ba1-885c-c11a3c222d98",
+    "year": "2013",
+    "make": "Dodge",
+    "model": "Avalon",
+    "image": "/images/car/car_4.jpg",
+    "carClass": "pickup",
+    "color": "yellow"
+  },
+  {
+    "id": "4d5df8bc-6a80-4198-befb-7d77180fb9b7",
+    "vin": "c6072e86-d558-4b00-8c9d-addca815ed90",
+    "dealerId": "e9429717-a670-4ba1-885c-c11a3c222d98",
+    "year": "2013",
+    "make": "Toyota",
+    "model": "Titan",
+    "image": "/images/car/car_1.jpg",
+    "carClass": "fullsize",
+    "color": "yellow"
+  },
+  {
+    "id": "b5c39f0f-5b24-4822-9290-8aafb219b103",
+    "vin": "e2ca7682-71cb-4beb-995a-badb505c7d1c",
+    "dealerId": "e9429717-a670-4ba1-885c-c11a3c222d98",
+    "year": "2013",
+    "make": "Dodge",
+    "model": "Titan",
+    "image": "/images/car/car_2.jpg",
+    "carClass": "midsize",
+    "color": "yellow"
+  }
+  
+]
