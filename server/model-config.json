@@ -24,5 +24,11 @@
   "Car": {
     "dataSource": "cloudant",
     "public": true
+  },
+  "user": {
+    "dataSource": "cloudant",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }
