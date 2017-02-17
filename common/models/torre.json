@@ -1,0 +1,24 @@
+{
+  "name": "Torre",
+  "plural": "Torres",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Torre": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "Descricao_Torre": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

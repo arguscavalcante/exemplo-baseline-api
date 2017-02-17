@@ -719,6 +719,726 @@ paths:
                 type: number
                 format: double
       deprecated: false
+  /Torres:
+    post:
+      tags:
+        - Torre
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Torre.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Torre'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Torre'
+      deprecated: false
+    put:
+      tags:
+        - Torre
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Torre.upsert__put_Torres
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Torre'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Torre'
+      deprecated: false
+    patch:
+      tags:
+        - Torre
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Torre.upsert__patch_Torres
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Torre'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Torre'
+      deprecated: false
+    get:
+      tags:
+        - Torre
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Torre.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Torre'
+      deprecated: false
+  /Torres/replaceOrCreate:
+    post:
+      tags:
+        - Torre
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Torre.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Torre'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Torre'
+      deprecated: false
+  /Torres/upsertWithWhere:
+    post:
+      tags:
+        - Torre
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: Torre.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Torre'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Torre'
+      deprecated: false
+  '/Torres/{id}/exists':
+    get:
+      tags:
+        - Torre
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Torre.exists__get_Torres_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Torres/{id}':
+    head:
+      tags:
+        - Torre
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Torre.exists__head_Torres_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Torre
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Torre.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Torre'
+      deprecated: false
+    delete:
+      tags:
+        - Torre
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Torre.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Torre
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Torre.prototype.updateAttributes__put_Torres_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Torre'
+        - name: id
+          in: path
+          description: Torre id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Torre'
+      deprecated: false
+    patch:
+      tags:
+        - Torre
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Torre.prototype.updateAttributes__patch_Torres_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Torre'
+        - name: id
+          in: path
+          description: Torre id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Torre'
+      deprecated: false
+  '/Torres/{id}/replace':
+    post:
+      tags:
+        - Torre
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: Torre.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Torre'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Torre'
+      deprecated: false
+  /Torres/findOne:
+    get:
+      tags:
+        - Torre
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Torre.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Torre'
+      deprecated: false
+  /Torres/update:
+    post:
+      tags:
+        - Torre
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Torre.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Torre'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Torres/count:
+    get:
+      tags:
+        - Torre
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Torre.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /SubTorres:
+    post:
+      tags:
+        - SubTorre
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: SubTorre.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/SubTorre'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SubTorre'
+      deprecated: false
+    put:
+      tags:
+        - SubTorre
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: SubTorre.upsert__put_SubTorres
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/SubTorre'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SubTorre'
+      deprecated: false
+    patch:
+      tags:
+        - SubTorre
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: SubTorre.upsert__patch_SubTorres
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/SubTorre'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SubTorre'
+      deprecated: false
+    get:
+      tags:
+        - SubTorre
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: SubTorre.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/SubTorre'
+      deprecated: false
+  /SubTorres/replaceOrCreate:
+    post:
+      tags:
+        - SubTorre
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: SubTorre.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/SubTorre'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SubTorre'
+      deprecated: false
+  /SubTorres/upsertWithWhere:
+    post:
+      tags:
+        - SubTorre
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: SubTorre.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/SubTorre'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SubTorre'
+      deprecated: false
+  '/SubTorres/{id}/exists':
+    get:
+      tags:
+        - SubTorre
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'SubTorre.exists__get_SubTorres_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/SubTorres/{id}':
+    head:
+      tags:
+        - SubTorre
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'SubTorre.exists__head_SubTorres_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - SubTorre
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: SubTorre.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SubTorre'
+      deprecated: false
+    delete:
+      tags:
+        - SubTorre
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: SubTorre.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - SubTorre
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'SubTorre.prototype.updateAttributes__put_SubTorres_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/SubTorre'
+        - name: id
+          in: path
+          description: SubTorre id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SubTorre'
+      deprecated: false
+    patch:
+      tags:
+        - SubTorre
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'SubTorre.prototype.updateAttributes__patch_SubTorres_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/SubTorre'
+        - name: id
+          in: path
+          description: SubTorre id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SubTorre'
+      deprecated: false
+  '/SubTorres/{id}/replace':
+    post:
+      tags:
+        - SubTorre
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: SubTorre.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/SubTorre'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SubTorre'
+      deprecated: false
+  /SubTorres/findOne:
+    get:
+      tags:
+        - SubTorre
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: SubTorre.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SubTorre'
+      deprecated: false
+  /SubTorres/update:
+    post:
+      tags:
+        - SubTorre
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: SubTorre.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/SubTorre'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /SubTorres/count:
+    get:
+      tags:
+        - SubTorre
+      summary: Count instances of the model matched by where from the data source.
+      operationId: SubTorre.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
 definitions:
   Car:
     properties:
@@ -746,15 +1466,46 @@ definitions:
     properties: {}
   user:
     properties:
-      login:
+      login_nome:
         type: string
-      senha:
+      login_pass:
         type: string
-      id:
+      login_user:
+        type: string
+      perfil:
+        type: number
+        format: double
+      subtorre:
+        type: string
+      torre:
         type: string
     required:
-      - login
-      - senha
+      - login_nome
+      - login_pass
+      - login_user
+      - perfil
+      - subtorre
+      - torre
+    additionalProperties: false
+  Torre:
+    properties:
+      Torre:
+        type: string
+      Descricao_Torre:
+        type: string
+    required:
+      - Torre
+      - Descricao_Torre
+    additionalProperties: false
+  SubTorre:
+    properties:
+      Subtorre:
+        type: string
+      Torre_id:
+        type: string
+    required:
+      - Subtorre
+      - Torre_id
     additionalProperties: false
 basePath: /api
 swagger: '2.0'

@@ -7,13 +7,29 @@
     "validateUpsert": true
   },
   "properties": {
-    "login": {
+    "login_nome": {
       "type": "string",
-      "id": false,
-      "required": true,
-      "index": true
+      "required": true
     },
-    "senha": {
+    "login_pass": {
+      "type": "string",
+      "required": true
+    },
+    "login_user": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "index": false
+    },
+    "perfil": {
+      "type": "number",
+      "required": true
+    },
+    "subtorre": {
+      "type": "string",
+      "required": true
+    },
+    "torre": {
       "type": "string",
       "required": true
     }

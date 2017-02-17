@@ -30,5 +30,13 @@
     "public": true,
     "$promise": {},
     "$resolved": true
+  },
+  "Torre": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "SubTorre": {
+    "dataSource": "cloudant",
+    "public": true
   }
 }
