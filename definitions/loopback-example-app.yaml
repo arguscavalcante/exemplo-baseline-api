@@ -1473,8 +1473,7 @@ definitions:
       login_user:
         type: string
       perfil:
-        type: number
-        format: double
+        type: string
       subtorre:
         type: string
       torre:

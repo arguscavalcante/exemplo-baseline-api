@@ -22,7 +22,7 @@
       "index": false
     },
     "perfil": {
-      "type": "number",
+      "type": "string",
       "required": true
     },
     "subtorre": {
