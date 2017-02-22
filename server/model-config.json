@@ -38,5 +38,11 @@
   "SubTorre": {
     "dataSource": "cloudant",
     "public": true
+  },
+  "projeto": {
+    "dataSource": "cloudant",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }

@@ -1,0 +1,45 @@
+{
+  "name": "projeto",
+  "plural": "projetos",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "classificacao_geral": {
+      "type": "string"
+    },
+    "familia": {
+      "type": "string"
+    },
+    "fase": {
+      "type": "string"
+    },
+    "gerente": {
+      "type": "string"
+    },
+    "mes_ano": {
+      "type": "string"
+    },
+    "projeto_id": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "proposta": {
+      "type": "string"
+    },
+    "sistema": {
+      "type": "string"
+    },
+    "valor_mes_ano": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

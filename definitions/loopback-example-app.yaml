@@ -1439,6 +1439,366 @@ paths:
                 type: number
                 format: double
       deprecated: false
+  /projetos:
+    post:
+      tags:
+        - projeto
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: projeto.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/projeto'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/projeto'
+      deprecated: false
+    put:
+      tags:
+        - projeto
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: projeto.upsert__put_projetos
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/projeto'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/projeto'
+      deprecated: false
+    patch:
+      tags:
+        - projeto
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: projeto.upsert__patch_projetos
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/projeto'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/projeto'
+      deprecated: false
+    get:
+      tags:
+        - projeto
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: projeto.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/projeto'
+      deprecated: false
+  /projetos/replaceOrCreate:
+    post:
+      tags:
+        - projeto
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: projeto.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/projeto'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/projeto'
+      deprecated: false
+  /projetos/upsertWithWhere:
+    post:
+      tags:
+        - projeto
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: projeto.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/projeto'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/projeto'
+      deprecated: false
+  '/projetos/{id}/exists':
+    get:
+      tags:
+        - projeto
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'projeto.exists__get_projetos_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/projetos/{id}':
+    head:
+      tags:
+        - projeto
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'projeto.exists__head_projetos_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - projeto
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: projeto.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/projeto'
+      deprecated: false
+    delete:
+      tags:
+        - projeto
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: projeto.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - projeto
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'projeto.prototype.updateAttributes__put_projetos_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/projeto'
+        - name: id
+          in: path
+          description: projeto id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/projeto'
+      deprecated: false
+    patch:
+      tags:
+        - projeto
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'projeto.prototype.updateAttributes__patch_projetos_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/projeto'
+        - name: id
+          in: path
+          description: projeto id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/projeto'
+      deprecated: false
+  '/projetos/{id}/replace':
+    post:
+      tags:
+        - projeto
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: projeto.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/projeto'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/projeto'
+      deprecated: false
+  /projetos/findOne:
+    get:
+      tags:
+        - projeto
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: projeto.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/projeto'
+      deprecated: false
+  /projetos/update:
+    post:
+      tags:
+        - projeto
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: projeto.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/projeto'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /projetos/count:
+    get:
+      tags:
+        - projeto
+      summary: Count instances of the model matched by where from the data source.
+      operationId: projeto.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
 definitions:
   Car:
     properties:
@@ -1505,6 +1865,30 @@ definitions:
     required:
       - Subtorre
       - Torre_id
+    additionalProperties: false
+  projeto:
+    properties:
+      classificacao_geral:
+        type: string
+      familia:
+        type: string
+      fase:
+        type: string
+      gerente:
+        type: string
+      mes_ano:
+        type: string
+      projeto_id:
+        type: string
+      proposta:
+        type: string
+      sistema:
+        type: string
+      valor_mes_ano:
+        type: number
+        format: double
+    required:
+      - projeto_id
     additionalProperties: false
 basePath: /api
 swagger: '2.0'
