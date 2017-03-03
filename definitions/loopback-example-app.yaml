@@ -1799,6 +1799,726 @@ paths:
                 type: number
                 format: double
       deprecated: false
+  /LimiteGraficos:
+    post:
+      tags:
+        - LimiteGrafico
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: LimiteGrafico.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/LimiteGrafico'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteGrafico'
+      deprecated: false
+    put:
+      tags:
+        - LimiteGrafico
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: LimiteGrafico.upsert__put_LimiteGraficos
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/LimiteGrafico'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteGrafico'
+      deprecated: false
+    patch:
+      tags:
+        - LimiteGrafico
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: LimiteGrafico.upsert__patch_LimiteGraficos
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/LimiteGrafico'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteGrafico'
+      deprecated: false
+    get:
+      tags:
+        - LimiteGrafico
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: LimiteGrafico.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/LimiteGrafico'
+      deprecated: false
+  /LimiteGraficos/replaceOrCreate:
+    post:
+      tags:
+        - LimiteGrafico
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: LimiteGrafico.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/LimiteGrafico'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteGrafico'
+      deprecated: false
+  /LimiteGraficos/upsertWithWhere:
+    post:
+      tags:
+        - LimiteGrafico
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: LimiteGrafico.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/LimiteGrafico'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteGrafico'
+      deprecated: false
+  '/LimiteGraficos/{id}/exists':
+    get:
+      tags:
+        - LimiteGrafico
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'LimiteGrafico.exists__get_LimiteGraficos_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/LimiteGraficos/{id}':
+    head:
+      tags:
+        - LimiteGrafico
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'LimiteGrafico.exists__head_LimiteGraficos_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - LimiteGrafico
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: LimiteGrafico.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteGrafico'
+      deprecated: false
+    delete:
+      tags:
+        - LimiteGrafico
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: LimiteGrafico.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - LimiteGrafico
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'LimiteGrafico.prototype.updateAttributes__put_LimiteGraficos_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/LimiteGrafico'
+        - name: id
+          in: path
+          description: LimiteGrafico id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteGrafico'
+      deprecated: false
+    patch:
+      tags:
+        - LimiteGrafico
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'LimiteGrafico.prototype.updateAttributes__patch_LimiteGraficos_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/LimiteGrafico'
+        - name: id
+          in: path
+          description: LimiteGrafico id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteGrafico'
+      deprecated: false
+  '/LimiteGraficos/{id}/replace':
+    post:
+      tags:
+        - LimiteGrafico
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: LimiteGrafico.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/LimiteGrafico'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteGrafico'
+      deprecated: false
+  /LimiteGraficos/findOne:
+    get:
+      tags:
+        - LimiteGrafico
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: LimiteGrafico.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteGrafico'
+      deprecated: false
+  /LimiteGraficos/update:
+    post:
+      tags:
+        - LimiteGrafico
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: LimiteGrafico.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/LimiteGrafico'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /LimiteGraficos/count:
+    get:
+      tags:
+        - LimiteGrafico
+      summary: Count instances of the model matched by where from the data source.
+      operationId: LimiteGrafico.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /LimiteReais:
+    post:
+      tags:
+        - LimiteReal
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: LimiteReal.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/LimiteReal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteReal'
+      deprecated: false
+    put:
+      tags:
+        - LimiteReal
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: LimiteReal.upsert__put_LimiteReais
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/LimiteReal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteReal'
+      deprecated: false
+    patch:
+      tags:
+        - LimiteReal
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: LimiteReal.upsert__patch_LimiteReais
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/LimiteReal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteReal'
+      deprecated: false
+    get:
+      tags:
+        - LimiteReal
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: LimiteReal.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/LimiteReal'
+      deprecated: false
+  /LimiteReais/replaceOrCreate:
+    post:
+      tags:
+        - LimiteReal
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: LimiteReal.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/LimiteReal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteReal'
+      deprecated: false
+  /LimiteReais/upsertWithWhere:
+    post:
+      tags:
+        - LimiteReal
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: LimiteReal.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/LimiteReal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteReal'
+      deprecated: false
+  '/LimiteReais/{id}/exists':
+    get:
+      tags:
+        - LimiteReal
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'LimiteReal.exists__get_LimiteReais_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/LimiteReais/{id}':
+    head:
+      tags:
+        - LimiteReal
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'LimiteReal.exists__head_LimiteReais_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - LimiteReal
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: LimiteReal.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteReal'
+      deprecated: false
+    delete:
+      tags:
+        - LimiteReal
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: LimiteReal.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - LimiteReal
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'LimiteReal.prototype.updateAttributes__put_LimiteReais_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/LimiteReal'
+        - name: id
+          in: path
+          description: LimiteReal id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteReal'
+      deprecated: false
+    patch:
+      tags:
+        - LimiteReal
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'LimiteReal.prototype.updateAttributes__patch_LimiteReais_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/LimiteReal'
+        - name: id
+          in: path
+          description: LimiteReal id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteReal'
+      deprecated: false
+  '/LimiteReais/{id}/replace':
+    post:
+      tags:
+        - LimiteReal
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: LimiteReal.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/LimiteReal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteReal'
+      deprecated: false
+  /LimiteReais/findOne:
+    get:
+      tags:
+        - LimiteReal
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: LimiteReal.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/LimiteReal'
+      deprecated: false
+  /LimiteReais/update:
+    post:
+      tags:
+        - LimiteReal
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: LimiteReal.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/LimiteReal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /LimiteReais/count:
+    get:
+      tags:
+        - LimiteReal
+      summary: Count instances of the model matched by where from the data source.
+      operationId: LimiteReal.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
 definitions:
   Car:
     properties:
@@ -1878,8 +2598,9 @@ definitions:
         type: string
       mes_ano:
         type: string
-      projeto_id:
-        type: string
+      id:
+        type: number
+        format: double
       proposta:
         type: string
       sistema:
@@ -1887,8 +2608,50 @@ definitions:
       valor_mes_ano:
         type: number
         format: double
+      regiao:
+        type: string
+      projeto:
+        type: string
     required:
-      - projeto_id
+      - id
+    additionalProperties: false
+  LimiteGrafico:
+    properties:
+      data_corte:
+        description: Data de corte do Limite
+        type: string
+      familia:
+        description: familia que representa o valor do limite
+        type: string
+      id:
+        description: id limite grafico
+        type: number
+        format: double
+      valor_limite:
+        description: valor do limite do grafico
+        type: number
+        format: double
+    required:
+      - id
+    additionalProperties: false
+  LimiteReal:
+    properties:
+      mes_ano_limite:
+        description: mes ano do limite
+        type: string
+      id:
+        description: id_mes_ano
+        type: number
+        format: double
+      valor_limite_mes_ano:
+        description: valor do limite por mes ano
+        type: number
+        format: double
+      subtorre_limite:
+        description: subtorre do limite real
+        type: string
+    required:
+      - id
     additionalProperties: false
 basePath: /api
 swagger: '2.0'

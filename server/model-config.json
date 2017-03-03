@@ -44,5 +44,13 @@
     "public": true,
     "$promise": {},
     "$resolved": true
+  },
+  "LimiteGrafico": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "LimiteReal": {
+    "dataSource": "cloudant",
+    "public": true
   }
 }

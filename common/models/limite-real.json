@@ -1,0 +1,36 @@
+{
+  "name": "LimiteReal",
+  "plural": "LimiteReais",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "mes_ano_limite": {
+      "type": "string",
+      "required": false,
+      "description": "mes ano do limite"
+    },
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "description": "id_mes_ano"
+    },
+    "valor_limite_mes_ano": {
+      "type": "number",
+      "required": false,
+      "description": "valor do limite por mes ano"
+    },
+    "subtorre_limite": {
+      "type": "string",
+      "required": false,
+      "description": "subtorre do limite real"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

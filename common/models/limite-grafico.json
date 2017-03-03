@@ -1,0 +1,36 @@
+{
+  "name": "LimiteGrafico",
+  "plural": "LimiteGraficos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "data_corte": {
+      "type": "string",
+      "required": false,
+      "description": "Data de corte do Limite"
+    },
+    "familia": {
+      "type": "string",
+      "required": false,
+      "description": "familia que representa o valor do limite"
+    },
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "description": "id limite grafico"
+    },
+    "valor_limite": {
+      "type": "number",
+      "required": false,
+      "description": "valor do limite do grafico"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
