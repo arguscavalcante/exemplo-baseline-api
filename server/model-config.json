@@ -21,10 +21,6 @@
     "dataSource": "db",
     "public": false
   },
-  "Car": {
-    "dataSource": "cloudant",
-    "public": true
-  },
   "user": {
     "dataSource": "cloudant",
     "public": true,
@@ -50,6 +46,10 @@
     "public": true
   },
   "LimiteReal": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "Sistemas": {
     "dataSource": "cloudant",
     "public": true
   }

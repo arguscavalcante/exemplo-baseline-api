@@ -1,0 +1,29 @@
+{
+  "name": "Sistemas",
+  "plural": "Sistemas",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "Sistema": {
+      "type": "string",
+      "required": false,
+      "index": false
+    },
+    "Regiao": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

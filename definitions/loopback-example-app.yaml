@@ -1,364 +1,4 @@
 paths:
-  /Cars:
-    post:
-      tags:
-        - Car
-      summary: Create a new instance of the model and persist it into the data source.
-      operationId: Car.create
-      parameters:
-        - name: data
-          in: body
-          description: Model instance data
-          required: false
-          schema:
-            description: Model instance data
-            $ref: '#/definitions/Car'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Car'
-      deprecated: false
-    put:
-      tags:
-        - Car
-      summary: Patch an existing model instance or insert a new one into the data source.
-      operationId: Car.upsert__put_Cars
-      parameters:
-        - name: data
-          in: body
-          description: Model instance data
-          required: false
-          schema:
-            description: Model instance data
-            $ref: '#/definitions/Car'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Car'
-      deprecated: false
-    patch:
-      tags:
-        - Car
-      summary: Patch an existing model instance or insert a new one into the data source.
-      operationId: Car.upsert__patch_Cars
-      parameters:
-        - name: data
-          in: body
-          description: Model instance data
-          required: false
-          schema:
-            description: Model instance data
-            $ref: '#/definitions/Car'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Car'
-      deprecated: false
-    get:
-      tags:
-        - Car
-      summary: Find all instances of the model matched by filter from the data source.
-      operationId: Car.find
-      parameters:
-        - name: filter
-          in: query
-          description: 'Filter defining fields, where, include, order, offset, and limit'
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: array
-            items:
-              $ref: '#/definitions/Car'
-      deprecated: false
-  /Cars/replaceOrCreate:
-    post:
-      tags:
-        - Car
-      summary: Replace an existing model instance or insert a new one into the data source.
-      operationId: Car.replaceOrCreate
-      parameters:
-        - name: data
-          in: body
-          description: Model instance data
-          required: false
-          schema:
-            description: Model instance data
-            $ref: '#/definitions/Car'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Car'
-      deprecated: false
-  /Cars/upsertWithWhere:
-    post:
-      tags:
-        - Car
-      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
-      operationId: Car.upsertWithWhere
-      parameters:
-        - name: where
-          in: query
-          description: Criteria to match model instances
-          required: false
-          type: string
-          format: JSON
-        - name: data
-          in: body
-          description: An object of model property name/value pairs
-          required: false
-          schema:
-            description: An object of model property name/value pairs
-            $ref: '#/definitions/Car'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Car'
-      deprecated: false
-  '/Cars/{id}/exists':
-    get:
-      tags:
-        - Car
-      summary: Check whether a model instance exists in the data source.
-      operationId: 'Car.exists__get_Cars_{id}_exists'
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: object
-            properties:
-              exists:
-                type: boolean
-      deprecated: false
-  '/Cars/{id}':
-    head:
-      tags:
-        - Car
-      summary: Check whether a model instance exists in the data source.
-      operationId: 'Car.exists__head_Cars_{id}'
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: object
-            properties:
-              exists:
-                type: boolean
-      deprecated: false
-    get:
-      tags:
-        - Car
-      summary: 'Find a model instance by {{id}} from the data source.'
-      operationId: Car.findById
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-        - name: filter
-          in: query
-          description: Filter defining fields and include
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Car'
-      deprecated: false
-    delete:
-      tags:
-        - Car
-      summary: 'Delete a model instance by {{id}} from the data source.'
-      operationId: Car.deleteById
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: object
-      deprecated: false
-    put:
-      tags:
-        - Car
-      summary: Patch attributes for a model instance and persist it into the data source.
-      operationId: 'Car.prototype.updateAttributes__put_Cars_{id}'
-      parameters:
-        - name: data
-          in: body
-          description: An object of model property name/value pairs
-          required: false
-          schema:
-            description: An object of model property name/value pairs
-            $ref: '#/definitions/Car'
-        - name: id
-          in: path
-          description: Car id
-          required: true
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Car'
-      deprecated: false
-    patch:
-      tags:
-        - Car
-      summary: Patch attributes for a model instance and persist it into the data source.
-      operationId: 'Car.prototype.updateAttributes__patch_Cars_{id}'
-      parameters:
-        - name: data
-          in: body
-          description: An object of model property name/value pairs
-          required: false
-          schema:
-            description: An object of model property name/value pairs
-            $ref: '#/definitions/Car'
-        - name: id
-          in: path
-          description: Car id
-          required: true
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Car'
-      deprecated: false
-  '/Cars/{id}/replace':
-    post:
-      tags:
-        - Car
-      summary: Replace attributes for a model instance and persist it into the data source.
-      operationId: Car.replaceById
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-        - name: data
-          in: body
-          description: Model instance data
-          required: false
-          schema:
-            description: Model instance data
-            $ref: '#/definitions/Car'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Car'
-      deprecated: false
-  /Cars/findOne:
-    get:
-      tags:
-        - Car
-      summary: Find first instance of the model matched by filter from the data source.
-      operationId: Car.findOne
-      parameters:
-        - name: filter
-          in: query
-          description: 'Filter defining fields, where, include, order, offset, and limit'
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Car'
-      deprecated: false
-  /Cars/update:
-    post:
-      tags:
-        - Car
-      summary: 'Update instances of the model matched by {{where}} from the data source.'
-      operationId: Car.updateAll
-      parameters:
-        - name: where
-          in: query
-          description: Criteria to match model instances
-          required: false
-          type: string
-          format: JSON
-        - name: data
-          in: body
-          description: An object of model property name/value pairs
-          required: false
-          schema:
-            description: An object of model property name/value pairs
-            $ref: '#/definitions/Car'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            description: Information related to the outcome of the operation
-            type: object
-            properties:
-              count:
-                description: The number of instances updated
-                type: number
-                format: double
-      deprecated: false
-  /Cars/count:
-    get:
-      tags:
-        - Car
-      summary: Count instances of the model matched by where from the data source.
-      operationId: Car.count
-      parameters:
-        - name: where
-          in: query
-          description: Criteria to match model instances
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: object
-            properties:
-              count:
-                type: number
-                format: double
-      deprecated: false
   /users:
     post:
       tags:
@@ -2519,31 +2159,367 @@ paths:
                 type: number
                 format: double
       deprecated: false
+  /Sistemas:
+    post:
+      tags:
+        - Sistemas
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Sistemas.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Sistemas'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Sistemas'
+      deprecated: false
+    put:
+      tags:
+        - Sistemas
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Sistemas.upsert__put_Sistemas
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Sistemas'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Sistemas'
+      deprecated: false
+    patch:
+      tags:
+        - Sistemas
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Sistemas.upsert__patch_Sistemas
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Sistemas'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Sistemas'
+      deprecated: false
+    get:
+      tags:
+        - Sistemas
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Sistemas.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Sistemas'
+      deprecated: false
+  /Sistemas/replaceOrCreate:
+    post:
+      tags:
+        - Sistemas
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Sistemas.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Sistemas'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Sistemas'
+      deprecated: false
+  /Sistemas/upsertWithWhere:
+    post:
+      tags:
+        - Sistemas
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: Sistemas.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Sistemas'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Sistemas'
+      deprecated: false
+  '/Sistemas/{id}/exists':
+    get:
+      tags:
+        - Sistemas
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Sistemas.exists__get_Sistemas_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Sistemas/{id}':
+    head:
+      tags:
+        - Sistemas
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Sistemas.exists__head_Sistemas_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Sistemas
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Sistemas.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Sistemas'
+      deprecated: false
+    delete:
+      tags:
+        - Sistemas
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Sistemas.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Sistemas
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Sistemas.prototype.updateAttributes__put_Sistemas_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Sistemas'
+        - name: id
+          in: path
+          description: Sistemas id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Sistemas'
+      deprecated: false
+    patch:
+      tags:
+        - Sistemas
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Sistemas.prototype.updateAttributes__patch_Sistemas_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Sistemas'
+        - name: id
+          in: path
+          description: Sistemas id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Sistemas'
+      deprecated: false
+  '/Sistemas/{id}/replace':
+    post:
+      tags:
+        - Sistemas
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: Sistemas.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Sistemas'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Sistemas'
+      deprecated: false
+  /Sistemas/findOne:
+    get:
+      tags:
+        - Sistemas
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Sistemas.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Sistemas'
+      deprecated: false
+  /Sistemas/update:
+    post:
+      tags:
+        - Sistemas
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Sistemas.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Sistemas'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Sistemas/count:
+    get:
+      tags:
+        - Sistemas
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Sistemas.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
 definitions:
-  Car:
-    properties:
-      id:
-        type: string
-      vin:
-        type: string
-      year:
-        type: number
-        format: double
-      make:
-        type: string
-      model:
-        type: string
-      image:
-        type: string
-      carClass:
-        type: string
-      color:
-        type: string
-    required:
-      - id
-    additionalProperties: false
-  x-any:
-    properties: {}
   user:
     properties:
       login_nome:
@@ -2566,6 +2542,8 @@ definitions:
       - subtorre
       - torre
     additionalProperties: false
+  x-any:
+    properties: {}
   Torre:
     properties:
       Torre:
@@ -2631,6 +2609,10 @@ definitions:
         description: valor do limite do grafico
         type: number
         format: double
+      varicao:
+        description: variacao da porcentagem por familia
+        type: number
+        format: double
     required:
       - id
     additionalProperties: false
@@ -2649,6 +2631,18 @@ definitions:
         format: double
       subtorre_limite:
         description: subtorre do limite real
+        type: string
+    required:
+      - id
+    additionalProperties: false
+  Sistemas:
+    properties:
+      id:
+        type: number
+        format: double
+      Sistema:
+        type: string
+      Regiao:
         type: string
     required:
       - id

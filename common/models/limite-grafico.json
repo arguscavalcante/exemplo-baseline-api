@@ -27,6 +27,11 @@
       "type": "number",
       "required": false,
       "description": "valor do limite do grafico"
+    },
+    "varicao": {
+      "type": "number",
+      "required": false,
+      "description": "variacao da porcentagem por familia"
     }
   },
   "validations": [],
