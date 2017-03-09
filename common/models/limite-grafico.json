@@ -8,13 +8,14 @@
   },
   "properties": {
     "data_corte": {
-      "type": "string",
+      "type": "number",
       "required": false,
       "description": "Data de corte do Limite"
     },
     "familia": {
       "type": "string",
       "required": false,
+      "index": true,
       "description": "familia que representa o valor do limite"
     },
     "id": {

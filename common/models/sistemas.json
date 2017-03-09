@@ -7,19 +7,19 @@
     "validateUpsert": true
   },
   "properties": {
-    "id": {
-      "type": "number",
-      "id": true,
-      "required": true
+    "Regiao": {
+      "type": "string",
+      "required": false
     },
     "Sistema": {
       "type": "string",
       "required": false,
-      "index": false
+      "index": true
     },
-    "Regiao": {
-      "type": "string",
-      "required": false
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true
     }
   },
   "validations": [],

@@ -7,10 +7,11 @@
     "validateUpsert": true
   },
   "properties": {
-    "mes_ano_limite": {
+    "familia": {
       "type": "string",
       "required": false,
-      "description": "mes ano do limite"
+      "index": true,
+      "description": "subtorre do limite real"
     },
     "id": {
       "type": "number",
@@ -18,15 +19,15 @@
       "required": true,
       "description": "id_mes_ano"
     },
+    "mes_ano_limite": {
+      "type": "number",
+      "required": false,
+      "description": "mes ano do limite"
+    },
     "valor_limite_mes_ano": {
       "type": "number",
       "required": false,
       "description": "valor do limite por mes ano"
-    },
-    "subtorre_limite": {
-      "type": "string",
-      "required": false,
-      "description": "subtorre do limite real"
     }
   },
   "validations": [],

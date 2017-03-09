@@ -9,7 +9,8 @@
   "properties": {
     "login_nome": {
       "type": "string",
-      "required": true
+      "required": true,
+      "index": false
     },
     "login_pass": {
       "type": "string",
@@ -19,7 +20,7 @@
       "type": "string",
       "id": true,
       "required": true,
-      "index": false
+      "index": true
     },
     "perfil": {
       "type": "string",

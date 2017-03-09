@@ -52,5 +52,13 @@
   "Sistemas": {
     "dataSource": "cloudant",
     "public": true
+  },
+  "Fase": {
+    "dataSource": "cloudant",
+    "public": true
+  },
+  "Regiao": {
+    "dataSource": "cloudant",
+    "public": true
   }
 }

@@ -1,26 +1,22 @@
 {
-  "name": "SubTorre",
-  "plural": "SubTorres",
+  "name": "Regiao",
+  "plural": "Regioes",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "Limite_grafico": {
-      "type": "number",
-      "required": true
-    },
-    "Subtorre": {
+    "Regiao_id": {
       "type": "string",
       "id": true,
       "required": true,
-      "index": true
+      "index": true,
+      "description": "id unico de regiao"
     },
-    "Torre_id": {
+    "Descricao": {
       "type": "string",
-      "required": true,
-      "index": false
+      "required": false
     }
   },
   "validations": [],

@@ -1,26 +1,21 @@
 {
-  "name": "SubTorre",
-  "plural": "SubTorres",
+  "name": "Fase",
+  "plural": "Fases",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "Limite_grafico": {
-      "type": "number",
-      "required": true
-    },
-    "Subtorre": {
+    "Fase": {
       "type": "string",
       "id": true,
       "required": true,
       "index": true
     },
-    "Torre_id": {
+    "Descricao": {
       "type": "string",
-      "required": true,
-      "index": false
+      "required": false
     }
   },
   "validations": [],

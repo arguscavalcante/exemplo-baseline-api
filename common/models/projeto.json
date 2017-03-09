@@ -12,24 +12,34 @@
       "type": "string"
     },
     "familia": {
-      "type": "string"
+      "type": "string",
+      "index": true
     },
     "fase": {
       "type": "string"
     },
     "gerente": {
-      "type": "string"
-    },
-    "mes_ano": {
-      "type": "string"
+      "type": "string",
+      "index": true
     },
     "id": {
       "type": "number",
       "id": true,
       "required": true
     },
+    "mes_ano": {
+      "type": "string"
+    },
+    "projeto": {
+      "type": "string",
+      "required": false
+    },
     "proposta": {
       "type": "string"
+    },
+    "regiao": {
+      "type": "string",
+      "required": false
     },
     "sistema": {
       "type": "string"
@@ -37,12 +47,8 @@
     "valor_mes_ano": {
       "type": "number"
     },
-    "regiao": {
-      "type": "string",
-      "required": false
-    },
-    "projeto": {
-      "type": "string",
+    "meses": {
+      "type": "object",
       "required": false
     }
   },

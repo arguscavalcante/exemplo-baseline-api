@@ -2519,6 +2519,726 @@ paths:
                 type: number
                 format: double
       deprecated: false
+  /Fases:
+    post:
+      tags:
+        - Fase
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Fase.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Fase'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Fase'
+      deprecated: false
+    put:
+      tags:
+        - Fase
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Fase.upsert__put_Fases
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Fase'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Fase'
+      deprecated: false
+    patch:
+      tags:
+        - Fase
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Fase.upsert__patch_Fases
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Fase'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Fase'
+      deprecated: false
+    get:
+      tags:
+        - Fase
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Fase.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Fase'
+      deprecated: false
+  /Fases/replaceOrCreate:
+    post:
+      tags:
+        - Fase
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Fase.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Fase'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Fase'
+      deprecated: false
+  /Fases/upsertWithWhere:
+    post:
+      tags:
+        - Fase
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: Fase.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Fase'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Fase'
+      deprecated: false
+  '/Fases/{id}/exists':
+    get:
+      tags:
+        - Fase
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Fase.exists__get_Fases_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Fases/{id}':
+    head:
+      tags:
+        - Fase
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Fase.exists__head_Fases_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Fase
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Fase.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Fase'
+      deprecated: false
+    delete:
+      tags:
+        - Fase
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Fase.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Fase
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Fase.prototype.updateAttributes__put_Fases_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Fase'
+        - name: id
+          in: path
+          description: Fase id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Fase'
+      deprecated: false
+    patch:
+      tags:
+        - Fase
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Fase.prototype.updateAttributes__patch_Fases_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Fase'
+        - name: id
+          in: path
+          description: Fase id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Fase'
+      deprecated: false
+  '/Fases/{id}/replace':
+    post:
+      tags:
+        - Fase
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: Fase.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Fase'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Fase'
+      deprecated: false
+  /Fases/findOne:
+    get:
+      tags:
+        - Fase
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Fase.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Fase'
+      deprecated: false
+  /Fases/update:
+    post:
+      tags:
+        - Fase
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Fase.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Fase'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Fases/count:
+    get:
+      tags:
+        - Fase
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Fase.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Regioes:
+    post:
+      tags:
+        - Regiao
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Regiao.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Regiao'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Regiao'
+      deprecated: false
+    put:
+      tags:
+        - Regiao
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Regiao.upsert__put_Regioes
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Regiao'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Regiao'
+      deprecated: false
+    patch:
+      tags:
+        - Regiao
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Regiao.upsert__patch_Regioes
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Regiao'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Regiao'
+      deprecated: false
+    get:
+      tags:
+        - Regiao
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Regiao.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Regiao'
+      deprecated: false
+  /Regioes/replaceOrCreate:
+    post:
+      tags:
+        - Regiao
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Regiao.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Regiao'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Regiao'
+      deprecated: false
+  /Regioes/upsertWithWhere:
+    post:
+      tags:
+        - Regiao
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: Regiao.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Regiao'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Regiao'
+      deprecated: false
+  '/Regioes/{id}/exists':
+    get:
+      tags:
+        - Regiao
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Regiao.exists__get_Regioes_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Regioes/{id}':
+    head:
+      tags:
+        - Regiao
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Regiao.exists__head_Regioes_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Regiao
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Regiao.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Regiao'
+      deprecated: false
+    delete:
+      tags:
+        - Regiao
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Regiao.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Regiao
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Regiao.prototype.updateAttributes__put_Regioes_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Regiao'
+        - name: id
+          in: path
+          description: Regiao id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Regiao'
+      deprecated: false
+    patch:
+      tags:
+        - Regiao
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Regiao.prototype.updateAttributes__patch_Regioes_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Regiao'
+        - name: id
+          in: path
+          description: Regiao id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Regiao'
+      deprecated: false
+  '/Regioes/{id}/replace':
+    post:
+      tags:
+        - Regiao
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: Regiao.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Regiao'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Regiao'
+      deprecated: false
+  /Regioes/findOne:
+    get:
+      tags:
+        - Regiao
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Regiao.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Regiao'
+      deprecated: false
+  /Regioes/update:
+    post:
+      tags:
+        - Regiao
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Regiao.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Regiao'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Regioes/count:
+    get:
+      tags:
+        - Regiao
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Regiao.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
 definitions:
   user:
     properties:
@@ -2556,11 +3276,15 @@ definitions:
     additionalProperties: false
   SubTorre:
     properties:
+      Limite_grafico:
+        type: number
+        format: double
       Subtorre:
         type: string
       Torre_id:
         type: string
     required:
+      - Limite_grafico
       - Subtorre
       - Torre_id
     additionalProperties: false
@@ -2574,22 +3298,24 @@ definitions:
         type: string
       gerente:
         type: string
-      mes_ano:
-        type: string
       id:
         type: number
         format: double
+      mes_ano:
+        type: string
+      projeto:
+        type: string
       proposta:
+        type: string
+      regiao:
         type: string
       sistema:
         type: string
       valor_mes_ano:
         type: number
         format: double
-      regiao:
-        type: string
-      projeto:
-        type: string
+      meses:
+        type: object
     required:
       - id
     additionalProperties: false
@@ -2597,7 +3323,8 @@ definitions:
     properties:
       data_corte:
         description: Data de corte do Limite
-        type: string
+        type: number
+        format: double
       familia:
         description: familia que representa o valor do limite
         type: string
@@ -2618,34 +3345,54 @@ definitions:
     additionalProperties: false
   LimiteReal:
     properties:
-      mes_ano_limite:
-        description: mes ano do limite
+      familia:
+        description: subtorre do limite real
         type: string
       id:
         description: id_mes_ano
+        type: number
+        format: double
+      mes_ano_limite:
+        description: mes ano do limite
         type: number
         format: double
       valor_limite_mes_ano:
         description: valor do limite por mes ano
         type: number
         format: double
-      subtorre_limite:
-        description: subtorre do limite real
-        type: string
     required:
       - id
     additionalProperties: false
   Sistemas:
     properties:
+      Regiao:
+        type: string
+      Sistema:
+        type: string
       id:
         type: number
         format: double
-      Sistema:
-        type: string
-      Regiao:
-        type: string
     required:
       - id
+    additionalProperties: false
+  Fase:
+    properties:
+      Fase:
+        type: string
+      Descricao:
+        type: string
+    required:
+      - Fase
+    additionalProperties: false
+  Regiao:
+    properties:
+      Regiao_id:
+        description: id unico de regiao
+        type: string
+      Descricao:
+        type: string
+    required:
+      - Regiao_id
     additionalProperties: false
 basePath: /api
 swagger: '2.0'
