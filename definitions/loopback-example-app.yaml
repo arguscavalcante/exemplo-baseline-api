@@ -3303,6 +3303,8 @@ definitions:
         format: double
       mes_ano:
         type: string
+      meses:
+        type: object
       projeto:
         type: string
       proposta:
@@ -3311,11 +3313,9 @@ definitions:
         type: string
       sistema:
         type: string
-      valor_mes_ano:
+      valor_total_proj:
         type: number
         format: double
-      meses:
-        type: object
     required:
       - id
     additionalProperties: false

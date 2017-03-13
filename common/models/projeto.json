@@ -30,6 +30,10 @@
     "mes_ano": {
       "type": "string"
     },
+    "meses": {
+      "type": "object",
+      "required": false
+    },
     "projeto": {
       "type": "string",
       "required": false
@@ -44,12 +48,8 @@
     "sistema": {
       "type": "string"
     },
-    "valor_mes_ano": {
+    "valor_total_proj": {
       "type": "number"
-    },
-    "meses": {
-      "type": "object",
-      "required": false
     }
   },
   "validations": [],
