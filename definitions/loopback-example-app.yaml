@@ -3386,11 +3386,14 @@ definitions:
     additionalProperties: false
   Regiao:
     properties:
+      Descricao:
+        type: string
       Regiao_id:
         description: id unico de regiao
         type: string
-      Descricao:
-        type: string
+      Sistemas:
+        description: vetor de sistemas
+        $ref: '#/definitions/x-any'
     required:
       - Regiao_id
     additionalProperties: false

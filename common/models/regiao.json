@@ -7,6 +7,10 @@
     "validateUpsert": true
   },
   "properties": {
+    "Descricao": {
+      "type": "string",
+      "required": false
+    },
     "Regiao_id": {
       "type": "string",
       "id": true,
@@ -14,9 +18,10 @@
       "index": true,
       "description": "id unico de regiao"
     },
-    "Descricao": {
-      "type": "string",
-      "required": false
+    "Sistemas": {
+      "type": "any",
+      "required": false,
+      "description": "vetor de sistemas"
     }
   },
   "validations": [],
