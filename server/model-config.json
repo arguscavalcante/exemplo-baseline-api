@@ -49,16 +49,16 @@
     "dataSource": "cloudant",
     "public": true
   },
-  "Sistemas": {
-    "dataSource": "cloudant",
-    "public": true
-  },
   "Fase": {
     "dataSource": "cloudant",
     "public": true
   },
   "Regiao": {
     "dataSource": "cloudant",
+    "public": true
+  },
+  "ClassGeral": {
+    "dataSource": "db",
     "public": true
   }
 }

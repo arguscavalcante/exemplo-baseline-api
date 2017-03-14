@@ -19,7 +19,9 @@
       "description": "id unico de regiao"
     },
     "Sistemas": {
-      "type": "any",
+      "type": [
+        "string"
+      ],
       "required": false,
       "description": "vetor de sistemas"
     }

@@ -31,8 +31,11 @@
       "type": "string"
     },
     "meses": {
-      "type": "object",
-      "required": false
+      "type": [
+        "object"
+      ],
+      "required": false,
+      "index": false
     },
     "projeto": {
       "type": "string",

@@ -2159,366 +2159,6 @@ paths:
                 type: number
                 format: double
       deprecated: false
-  /Sistemas:
-    post:
-      tags:
-        - Sistemas
-      summary: Create a new instance of the model and persist it into the data source.
-      operationId: Sistemas.create
-      parameters:
-        - name: data
-          in: body
-          description: Model instance data
-          required: false
-          schema:
-            description: Model instance data
-            $ref: '#/definitions/Sistemas'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Sistemas'
-      deprecated: false
-    put:
-      tags:
-        - Sistemas
-      summary: Patch an existing model instance or insert a new one into the data source.
-      operationId: Sistemas.upsert__put_Sistemas
-      parameters:
-        - name: data
-          in: body
-          description: Model instance data
-          required: false
-          schema:
-            description: Model instance data
-            $ref: '#/definitions/Sistemas'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Sistemas'
-      deprecated: false
-    patch:
-      tags:
-        - Sistemas
-      summary: Patch an existing model instance or insert a new one into the data source.
-      operationId: Sistemas.upsert__patch_Sistemas
-      parameters:
-        - name: data
-          in: body
-          description: Model instance data
-          required: false
-          schema:
-            description: Model instance data
-            $ref: '#/definitions/Sistemas'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Sistemas'
-      deprecated: false
-    get:
-      tags:
-        - Sistemas
-      summary: Find all instances of the model matched by filter from the data source.
-      operationId: Sistemas.find
-      parameters:
-        - name: filter
-          in: query
-          description: 'Filter defining fields, where, include, order, offset, and limit'
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: array
-            items:
-              $ref: '#/definitions/Sistemas'
-      deprecated: false
-  /Sistemas/replaceOrCreate:
-    post:
-      tags:
-        - Sistemas
-      summary: Replace an existing model instance or insert a new one into the data source.
-      operationId: Sistemas.replaceOrCreate
-      parameters:
-        - name: data
-          in: body
-          description: Model instance data
-          required: false
-          schema:
-            description: Model instance data
-            $ref: '#/definitions/Sistemas'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Sistemas'
-      deprecated: false
-  /Sistemas/upsertWithWhere:
-    post:
-      tags:
-        - Sistemas
-      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
-      operationId: Sistemas.upsertWithWhere
-      parameters:
-        - name: where
-          in: query
-          description: Criteria to match model instances
-          required: false
-          type: string
-          format: JSON
-        - name: data
-          in: body
-          description: An object of model property name/value pairs
-          required: false
-          schema:
-            description: An object of model property name/value pairs
-            $ref: '#/definitions/Sistemas'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Sistemas'
-      deprecated: false
-  '/Sistemas/{id}/exists':
-    get:
-      tags:
-        - Sistemas
-      summary: Check whether a model instance exists in the data source.
-      operationId: 'Sistemas.exists__get_Sistemas_{id}_exists'
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: object
-            properties:
-              exists:
-                type: boolean
-      deprecated: false
-  '/Sistemas/{id}':
-    head:
-      tags:
-        - Sistemas
-      summary: Check whether a model instance exists in the data source.
-      operationId: 'Sistemas.exists__head_Sistemas_{id}'
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: object
-            properties:
-              exists:
-                type: boolean
-      deprecated: false
-    get:
-      tags:
-        - Sistemas
-      summary: 'Find a model instance by {{id}} from the data source.'
-      operationId: Sistemas.findById
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-        - name: filter
-          in: query
-          description: Filter defining fields and include
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Sistemas'
-      deprecated: false
-    delete:
-      tags:
-        - Sistemas
-      summary: 'Delete a model instance by {{id}} from the data source.'
-      operationId: Sistemas.deleteById
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: object
-      deprecated: false
-    put:
-      tags:
-        - Sistemas
-      summary: Patch attributes for a model instance and persist it into the data source.
-      operationId: 'Sistemas.prototype.updateAttributes__put_Sistemas_{id}'
-      parameters:
-        - name: data
-          in: body
-          description: An object of model property name/value pairs
-          required: false
-          schema:
-            description: An object of model property name/value pairs
-            $ref: '#/definitions/Sistemas'
-        - name: id
-          in: path
-          description: Sistemas id
-          required: true
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Sistemas'
-      deprecated: false
-    patch:
-      tags:
-        - Sistemas
-      summary: Patch attributes for a model instance and persist it into the data source.
-      operationId: 'Sistemas.prototype.updateAttributes__patch_Sistemas_{id}'
-      parameters:
-        - name: data
-          in: body
-          description: An object of model property name/value pairs
-          required: false
-          schema:
-            description: An object of model property name/value pairs
-            $ref: '#/definitions/Sistemas'
-        - name: id
-          in: path
-          description: Sistemas id
-          required: true
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Sistemas'
-      deprecated: false
-  '/Sistemas/{id}/replace':
-    post:
-      tags:
-        - Sistemas
-      summary: Replace attributes for a model instance and persist it into the data source.
-      operationId: Sistemas.replaceById
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-        - name: data
-          in: body
-          description: Model instance data
-          required: false
-          schema:
-            description: Model instance data
-            $ref: '#/definitions/Sistemas'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Sistemas'
-      deprecated: false
-  /Sistemas/findOne:
-    get:
-      tags:
-        - Sistemas
-      summary: Find first instance of the model matched by filter from the data source.
-      operationId: Sistemas.findOne
-      parameters:
-        - name: filter
-          in: query
-          description: 'Filter defining fields, where, include, order, offset, and limit'
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            $ref: '#/definitions/Sistemas'
-      deprecated: false
-  /Sistemas/update:
-    post:
-      tags:
-        - Sistemas
-      summary: 'Update instances of the model matched by {{where}} from the data source.'
-      operationId: Sistemas.updateAll
-      parameters:
-        - name: where
-          in: query
-          description: Criteria to match model instances
-          required: false
-          type: string
-          format: JSON
-        - name: data
-          in: body
-          description: An object of model property name/value pairs
-          required: false
-          schema:
-            description: An object of model property name/value pairs
-            $ref: '#/definitions/Sistemas'
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            description: Information related to the outcome of the operation
-            type: object
-            properties:
-              count:
-                description: The number of instances updated
-                type: number
-                format: double
-      deprecated: false
-  /Sistemas/count:
-    get:
-      tags:
-        - Sistemas
-      summary: Count instances of the model matched by where from the data source.
-      operationId: Sistemas.count
-      parameters:
-        - name: where
-          in: query
-          description: Criteria to match model instances
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: object
-            properties:
-              count:
-                type: number
-                format: double
-      deprecated: false
   /Fases:
     post:
       tags:
@@ -3239,6 +2879,366 @@ paths:
                 type: number
                 format: double
       deprecated: false
+  /ClassGerals:
+    post:
+      tags:
+        - ClassGeral
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: ClassGeral.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/ClassGeral'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ClassGeral'
+      deprecated: false
+    put:
+      tags:
+        - ClassGeral
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: ClassGeral.upsert__put_ClassGerals
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/ClassGeral'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ClassGeral'
+      deprecated: false
+    patch:
+      tags:
+        - ClassGeral
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: ClassGeral.upsert__patch_ClassGerals
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/ClassGeral'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ClassGeral'
+      deprecated: false
+    get:
+      tags:
+        - ClassGeral
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: ClassGeral.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ClassGeral'
+      deprecated: false
+  /ClassGerals/replaceOrCreate:
+    post:
+      tags:
+        - ClassGeral
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: ClassGeral.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/ClassGeral'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ClassGeral'
+      deprecated: false
+  /ClassGerals/upsertWithWhere:
+    post:
+      tags:
+        - ClassGeral
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: ClassGeral.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/ClassGeral'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ClassGeral'
+      deprecated: false
+  '/ClassGerals/{id}/exists':
+    get:
+      tags:
+        - ClassGeral
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'ClassGeral.exists__get_ClassGerals_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/ClassGerals/{id}':
+    head:
+      tags:
+        - ClassGeral
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'ClassGeral.exists__head_ClassGerals_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - ClassGeral
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: ClassGeral.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ClassGeral'
+      deprecated: false
+    delete:
+      tags:
+        - ClassGeral
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: ClassGeral.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - ClassGeral
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'ClassGeral.prototype.updateAttributes__put_ClassGerals_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/ClassGeral'
+        - name: id
+          in: path
+          description: ClassGeral id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ClassGeral'
+      deprecated: false
+    patch:
+      tags:
+        - ClassGeral
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'ClassGeral.prototype.updateAttributes__patch_ClassGerals_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/ClassGeral'
+        - name: id
+          in: path
+          description: ClassGeral id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ClassGeral'
+      deprecated: false
+  '/ClassGerals/{id}/replace':
+    post:
+      tags:
+        - ClassGeral
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: ClassGeral.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/ClassGeral'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ClassGeral'
+      deprecated: false
+  /ClassGerals/findOne:
+    get:
+      tags:
+        - ClassGeral
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: ClassGeral.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ClassGeral'
+      deprecated: false
+  /ClassGerals/update:
+    post:
+      tags:
+        - ClassGeral
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: ClassGeral.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/ClassGeral'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /ClassGerals/count:
+    get:
+      tags:
+        - ClassGeral
+      summary: Count instances of the model matched by where from the data source.
+      operationId: ClassGeral.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
 definitions:
   user:
     properties:
@@ -3266,13 +3266,17 @@ definitions:
     properties: {}
   Torre:
     properties:
-      Torre:
-        type: string
       Descricao_Torre:
         type: string
+      Subtorre:
+        type: array
+        items:
+          type: object
+      Torre:
+        type: string
     required:
-      - Torre
       - Descricao_Torre
+      - Torre
     additionalProperties: false
   SubTorre:
     properties:
@@ -3304,7 +3308,9 @@ definitions:
       mes_ano:
         type: string
       meses:
-        type: object
+        type: array
+        items:
+          type: object
       projeto:
         type: string
       proposta:
@@ -3363,18 +3369,6 @@ definitions:
     required:
       - id
     additionalProperties: false
-  Sistemas:
-    properties:
-      Regiao:
-        type: string
-      Sistema:
-        type: string
-      id:
-        type: number
-        format: double
-    required:
-      - id
-    additionalProperties: false
   Fase:
     properties:
       Fase:
@@ -3393,9 +3387,20 @@ definitions:
         type: string
       Sistemas:
         description: vetor de sistemas
-        $ref: '#/definitions/x-any'
+        type: array
+        items:
+          type: string
     required:
       - Regiao_id
+    additionalProperties: false
+  ClassGeral:
+    properties:
+      ClassGeral_id:
+        type: string
+      Descricao:
+        type: string
+    required:
+      - ClassGeral_id
     additionalProperties: false
 basePath: /api
 swagger: '2.0'

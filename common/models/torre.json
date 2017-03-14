@@ -7,14 +7,22 @@
     "validateUpsert": true
   },
   "properties": {
-    "Torre": {
-      "type": "string",
-      "id": true,
-      "required": true
-    },
     "Descricao_Torre": {
       "type": "string",
       "required": true
+    },
+    "Subtorre": {
+      "type": [
+        "object"
+      ],
+      "required": false,
+      "index": true
+    },
+    "Torre": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "index": true
     }
   },
   "validations": [],
