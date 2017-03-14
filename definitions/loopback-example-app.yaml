@@ -2879,7 +2879,7 @@ paths:
                 type: number
                 format: double
       deprecated: false
-  /ClassGerals:
+  /ClassGerais:
     post:
       tags:
         - ClassGeral
@@ -2903,7 +2903,7 @@ paths:
       tags:
         - ClassGeral
       summary: Patch an existing model instance or insert a new one into the data source.
-      operationId: ClassGeral.upsert__put_ClassGerals
+      operationId: ClassGeral.upsert__put_ClassGerais
       parameters:
         - name: data
           in: body
@@ -2922,7 +2922,7 @@ paths:
       tags:
         - ClassGeral
       summary: Patch an existing model instance or insert a new one into the data source.
-      operationId: ClassGeral.upsert__patch_ClassGerals
+      operationId: ClassGeral.upsert__patch_ClassGerais
       parameters:
         - name: data
           in: body
@@ -2957,7 +2957,7 @@ paths:
             items:
               $ref: '#/definitions/ClassGeral'
       deprecated: false
-  /ClassGerals/replaceOrCreate:
+  /ClassGerais/replaceOrCreate:
     post:
       tags:
         - ClassGeral
@@ -2977,7 +2977,7 @@ paths:
           schema:
             $ref: '#/definitions/ClassGeral'
       deprecated: false
-  /ClassGerals/upsertWithWhere:
+  /ClassGerais/upsertWithWhere:
     post:
       tags:
         - ClassGeral
@@ -3003,12 +3003,12 @@ paths:
           schema:
             $ref: '#/definitions/ClassGeral'
       deprecated: false
-  '/ClassGerals/{id}/exists':
+  '/ClassGerais/{id}/exists':
     get:
       tags:
         - ClassGeral
       summary: Check whether a model instance exists in the data source.
-      operationId: 'ClassGeral.exists__get_ClassGerals_{id}_exists'
+      operationId: 'ClassGeral.exists__get_ClassGerais_{id}_exists'
       parameters:
         - name: id
           in: path
@@ -3025,12 +3025,12 @@ paths:
               exists:
                 type: boolean
       deprecated: false
-  '/ClassGerals/{id}':
+  '/ClassGerais/{id}':
     head:
       tags:
         - ClassGeral
       summary: Check whether a model instance exists in the data source.
-      operationId: 'ClassGeral.exists__head_ClassGerals_{id}'
+      operationId: 'ClassGeral.exists__head_ClassGerais_{id}'
       parameters:
         - name: id
           in: path
@@ -3093,7 +3093,7 @@ paths:
       tags:
         - ClassGeral
       summary: Patch attributes for a model instance and persist it into the data source.
-      operationId: 'ClassGeral.prototype.updateAttributes__put_ClassGerals_{id}'
+      operationId: 'ClassGeral.prototype.updateAttributes__put_ClassGerais_{id}'
       parameters:
         - name: data
           in: body
@@ -3118,7 +3118,7 @@ paths:
       tags:
         - ClassGeral
       summary: Patch attributes for a model instance and persist it into the data source.
-      operationId: 'ClassGeral.prototype.updateAttributes__patch_ClassGerals_{id}'
+      operationId: 'ClassGeral.prototype.updateAttributes__patch_ClassGerais_{id}'
       parameters:
         - name: data
           in: body
@@ -3139,7 +3139,7 @@ paths:
           schema:
             $ref: '#/definitions/ClassGeral'
       deprecated: false
-  '/ClassGerals/{id}/replace':
+  '/ClassGerais/{id}/replace':
     post:
       tags:
         - ClassGeral
@@ -3165,7 +3165,7 @@ paths:
           schema:
             $ref: '#/definitions/ClassGeral'
       deprecated: false
-  /ClassGerals/findOne:
+  /ClassGerais/findOne:
     get:
       tags:
         - ClassGeral
@@ -3184,7 +3184,7 @@ paths:
           schema:
             $ref: '#/definitions/ClassGeral'
       deprecated: false
-  /ClassGerals/update:
+  /ClassGerais/update:
     post:
       tags:
         - ClassGeral
@@ -3216,7 +3216,7 @@ paths:
                 type: number
                 format: double
       deprecated: false
-  /ClassGerals/count:
+  /ClassGerais/count:
     get:
       tags:
         - ClassGeral
@@ -3268,10 +3268,6 @@ definitions:
     properties:
       Descricao_Torre:
         type: string
-      Subtorre:
-        type: array
-        items:
-          type: object
       Torre:
         type: string
     required:
@@ -3338,8 +3334,15 @@ definitions:
         description: id limite grafico
         type: number
         format: double
+      torre:
+        description: torre que ocorre a variação
+        type: string
       valor_limite:
         description: valor do limite do grafico
+        type: number
+        format: double
+      variacao_torre:
+        description: variacao da porcentagem por torre
         type: number
         format: double
       varicao:
@@ -3399,6 +3402,8 @@ definitions:
         type: string
       Descricao:
         type: string
+      Baseline:
+        type: boolean
     required:
       - ClassGeral_id
     additionalProperties: false

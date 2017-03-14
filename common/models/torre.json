@@ -11,13 +11,6 @@
       "type": "string",
       "required": true
     },
-    "Subtorre": {
-      "type": [
-        "object"
-      ],
-      "required": false,
-      "index": true
-    },
     "Torre": {
       "type": "string",
       "id": true,

@@ -58,7 +58,7 @@
     "public": true
   },
   "ClassGeral": {
-    "dataSource": "db",
+    "dataSource": "cloudant",
     "public": true
   }
 }

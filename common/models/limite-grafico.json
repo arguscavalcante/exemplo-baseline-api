@@ -24,10 +24,22 @@
       "required": true,
       "description": "id limite grafico"
     },
+    "torre": {
+      "type": "string",
+      "required": false,
+      "index": true,
+      "description": "torre que ocorre a variação"
+    },
     "valor_limite": {
       "type": "number",
       "required": false,
       "description": "valor do limite do grafico"
+    },
+    "variacao_torre": {
+      "type": "number",
+      "required": false,
+      "index": true,
+      "description": "variacao da porcentagem por torre"
     },
     "varicao": {
       "type": "number",

@@ -1,5 +1,6 @@
 {
   "name": "ClassGeral",
+  "plural": "ClassGerais",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -15,6 +16,11 @@
     "Descricao": {
       "type": "string",
       "required": false
+    },
+    "Baseline": {
+      "type": "boolean",
+      "required": false,
+      "index": true
     }
   },
   "validations": [],
