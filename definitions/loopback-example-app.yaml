@@ -3354,22 +3354,19 @@ definitions:
     additionalProperties: false
   LimiteReal:
     properties:
+      dados:
+        description: mes ano do limite
+        type: array
+        items:
+          type: object
       familia:
         description: subtorre do limite real
         type: string
       id:
-        description: id_mes_ano
-        type: number
-        format: double
-      mes_ano_limite:
-        description: mes ano do limite
-        type: number
-        format: double
-      valor_limite_mes_ano:
-        description: valor do limite por mes ano
         type: number
         format: double
     required:
+      - familia
       - id
     additionalProperties: false
   Fase:
