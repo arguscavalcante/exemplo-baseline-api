@@ -7,17 +7,17 @@
     "validateUpsert": true
   },
   "properties": {
-    "Limite_grafico": {
+    "max_grafico": {
       "type": "number",
       "required": true
     },
-    "Subtorre": {
+    "subtorre": {
       "type": "string",
       "id": true,
       "required": true,
       "index": true
     },
-    "Torre_id": {
+    "torre_id": {
       "type": "string",
       "required": true,
       "index": false

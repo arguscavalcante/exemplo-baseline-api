@@ -3276,17 +3276,17 @@ definitions:
     additionalProperties: false
   SubTorre:
     properties:
-      Limite_grafico:
+      max_grafico:
         type: number
         format: double
-      Subtorre:
+      subtorre:
         type: string
-      Torre_id:
+      torre_id:
         type: string
     required:
-      - Limite_grafico
-      - Subtorre
-      - Torre_id
+      - max_grafico
+      - subtorre
+      - torre_id
     additionalProperties: false
   projeto:
     properties:
@@ -3362,21 +3362,17 @@ definitions:
       familia:
         description: subtorre do limite real
         type: string
-      id:
-        type: number
-        format: double
     required:
       - familia
-      - id
     additionalProperties: false
   Fase:
     properties:
-      Fase:
+      descricao:
         type: string
-      Descricao:
+      fase:
         type: string
     required:
-      - Fase
+      - fase
     additionalProperties: false
   Regiao:
     properties:
@@ -3390,8 +3386,11 @@ definitions:
         type: array
         items:
           type: string
+      Familia:
+        type: string
     required:
       - Regiao_id
+      - Familia
     additionalProperties: false
   ClassGeral:
     properties:

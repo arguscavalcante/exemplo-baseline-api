@@ -16,15 +16,10 @@
     },
     "familia": {
       "type": "string",
-      "id": false,
-      "required": true,
-      "index": true,
-      "description": "subtorre do limite real"
-    },
-    "id": {
-      "type": "number",
       "id": true,
-      "required": true
+      "required": true,
+      "index": false,
+      "description": "subtorre do limite real"
     }
   },
   "validations": [],

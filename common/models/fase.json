@@ -7,15 +7,15 @@
     "validateUpsert": true
   },
   "properties": {
-    "Fase": {
+    "descricao": {
+      "type": "string",
+      "required": false
+    },
+    "fase": {
       "type": "string",
       "id": true,
       "required": true,
       "index": true
-    },
-    "Descricao": {
-      "type": "string",
-      "required": false
     }
   },
   "validations": [],

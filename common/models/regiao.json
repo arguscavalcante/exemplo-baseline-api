@@ -9,6 +9,7 @@
   "properties": {
     "Descricao": {
       "type": "string",
+      "id": false,
       "required": false
     },
     "Regiao_id": {
@@ -24,6 +25,11 @@
       ],
       "required": false,
       "description": "vetor de sistemas"
+    },
+    "Familia": {
+      "type": "string",
+      "id": true,
+      "required": true
     }
   },
   "validations": [],
