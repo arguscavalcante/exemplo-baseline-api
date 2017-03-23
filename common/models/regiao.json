@@ -7,29 +7,37 @@
     "validateUpsert": true
   },
   "properties": {
-    "Descricao": {
+    "descricao": {
       "type": "string",
       "id": false,
       "required": false
     },
-    "Regiao_id": {
+    "familia": {
+      "type": "string",
+      "id": false,
+      "required": true,
+      "index": true,
+      "description": "familia"
+    },
+    "id_regiao": {
       "type": "string",
       "id": true,
       "required": true,
-      "index": true,
       "description": "id unico de regiao"
     },
-    "Sistemas": {
+    "regiao": {
+      "type": "string",
+      "id": false,
+      "required": true,
+      "index": true,
+      "description": "regiao"
+    },
+    "sistemas": {
       "type": [
         "string"
       ],
       "required": false,
       "description": "vetor de sistemas"
-    },
-    "Familia": {
-      "type": "string",
-      "id": true,
-      "required": true
     }
   },
   "validations": [],

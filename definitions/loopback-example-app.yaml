@@ -3250,17 +3250,16 @@ definitions:
         type: string
       perfil:
         type: string
-      subtorre:
-        type: string
-      torre:
-        type: string
+      familia:
+        type: array
+        items:
+          type: string
     required:
       - login_nome
       - login_pass
       - login_user
       - perfil
-      - subtorre
-      - torre
+      - familia
     additionalProperties: false
   x-any:
     properties: {}
@@ -3298,9 +3297,8 @@ definitions:
         type: string
       gerente:
         type: string
-      id:
-        type: number
-        format: double
+      projeto_id:
+        type: string
       mes_ano:
         type: string
       meses:
@@ -3319,7 +3317,18 @@ definitions:
         type: number
         format: double
     required:
-      - id
+      - classificacao_geral
+      - familia
+      - fase
+      - gerente
+      - projeto_id
+      - mes_ano
+      - meses
+      - projeto
+      - proposta
+      - regiao
+      - sistema
+      - valor_total_proj
     additionalProperties: false
   LimiteGrafico:
     properties:
@@ -3376,21 +3385,26 @@ definitions:
     additionalProperties: false
   Regiao:
     properties:
-      Descricao:
+      descricao:
         type: string
-      Regiao_id:
+      familia:
+        description: familia
+        type: string
+      id_regiao:
         description: id unico de regiao
         type: string
-      Sistemas:
+      regiao:
+        description: regiao
+        type: string
+      sistemas:
         description: vetor de sistemas
         type: array
         items:
           type: string
-      Familia:
-        type: string
     required:
-      - Regiao_id
-      - Familia
+      - familia
+      - id_regiao
+      - regiao
     additionalProperties: false
   ClassGeral:
     properties:

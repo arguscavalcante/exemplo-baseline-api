@@ -9,50 +9,58 @@
   },
   "properties": {
     "classificacao_geral": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "familia": {
       "type": "string",
+      "required": true,
       "index": true
     },
     "fase": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "gerente": {
       "type": "string",
+      "required": true,
       "index": true
     },
-    "id": {
-      "type": "number",
+    "projeto_id": {
+      "type": "string",
       "id": true,
       "required": true
     },
     "mes_ano": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "meses": {
       "type": [
         "object"
       ],
-      "required": false,
+      "required": true,
       "index": false
     },
     "projeto": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "proposta": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "regiao": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "sistema": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "valor_total_proj": {
-      "type": "number"
+      "type": "number",
+      "required": true
     }
   },
   "validations": [],

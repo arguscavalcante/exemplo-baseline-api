@@ -26,12 +26,10 @@
       "type": "string",
       "required": true
     },
-    "subtorre": {
-      "type": "string",
-      "required": true
-    },
-    "torre": {
-      "type": "string",
+    "familia": {
+      "type": [
+        "string"
+      ],
       "required": true
     }
   },
