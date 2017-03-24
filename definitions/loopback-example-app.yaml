@@ -3297,15 +3297,13 @@ definitions:
         type: string
       gerente:
         type: string
-      projeto_id:
-        type: string
-      mes_ano:
-        type: string
       meses:
         type: array
         items:
           type: object
       projeto:
+        type: string
+      projeto_id:
         type: string
       proposta:
         type: string
@@ -3321,10 +3319,9 @@ definitions:
       - familia
       - fase
       - gerente
-      - projeto_id
-      - mes_ano
       - meses
       - projeto
+      - projeto_id
       - proposta
       - regiao
       - sistema

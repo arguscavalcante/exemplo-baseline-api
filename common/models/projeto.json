@@ -26,15 +26,6 @@
       "required": true,
       "index": true
     },
-    "projeto_id": {
-      "type": "string",
-      "id": true,
-      "required": true
-    },
-    "mes_ano": {
-      "type": "string",
-      "required": true
-    },
     "meses": {
       "type": [
         "object"
@@ -44,6 +35,11 @@
     },
     "projeto": {
       "type": "string",
+      "required": true
+    },
+    "projeto_id": {
+      "type": "string",
+      "id": true,
       "required": true
     },
     "proposta": {
