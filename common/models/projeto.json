@@ -57,6 +57,10 @@
     "valor_total_proj": {
       "type": "number",
       "required": true
+    },
+    "descricao": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],

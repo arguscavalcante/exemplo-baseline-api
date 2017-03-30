@@ -21,6 +21,11 @@
       "type": "string",
       "required": true,
       "index": false
+    },
+    "ano_limite": {
+      "type": "number",
+      "required": true,
+      "index": false
     }
   },
   "validations": [],

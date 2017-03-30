@@ -5,36 +5,37 @@
 var async = require('async');
 
 // sample data
-//var cars = require('./cars.json');
-//var users = require('./users.json');
+// var cars = require('./cars.json');
+// var users = require('./users.json');
 //var inventory = require('./inventory.json');
 //var locations = require('./locations.json');
 
 module.exports = function(app, cb) {
-  var User = app.models.User;
+  // var User = app.models.user;
 //  var Location = app.models.Location;
 //  var Customer = app.models.Customer;
-//  var Car = app.models.Car;
+  // var Car = app.models.Car;
   var db = app.dataSources.db;
-
+ 
   var ids = {
   };
 
   function importData(Model, data, cb) {
-    // console.log('Importing data for ' + Model.modelName);
+    console.log('Importing data for ' + Model.modelName);
     Model.destroyAll(function(err) {
       if (err) {
         cb(err);
         return;
       }
-      async.eachLimit(data, 32, function(d, callback) {
-        if (ids[Model.modelName] === undefined) {
-          // The Oracle data has Location with ids over 80
-          // and the index.html depends on location 88 being present
-          ids[Model.modelName] = 80;
-        }
-        d.id = ids[Model.modelName]++;
-        Model.create(d, callback);
+      async.eachLimit(data, 3, function(d, callback) {
+          var data = new Date();        
+          var s = data.getMilliseconds();
+
+              d.id = ids[Model.modelName]++;
+              Model.create(d, callback);
+        
+        // d.id = ids[Model.modelName]++;
+        // Model.create(d, callback);
       }, cb);
     });
   }
@@ -45,8 +46,8 @@ module.exports = function(app, cb) {
     },
 
 //    importData.bind(null, Location, locations),
-//    importData.bind(null, Car, cars),
-//    importData.bind(null, User, users),
+  //  importData.bind(null, Car, cars)//,
+  //  importData.bind(null, User, users)//,
 //    importData.bind(null, Customer, customers)
   ], function(err/*, results*/) {
     cb(err);

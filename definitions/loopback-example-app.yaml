@@ -3282,10 +3282,14 @@ definitions:
         type: string
       torre_id:
         type: string
+      ano_limite:
+        type: number
+        format: double
     required:
       - max_grafico
       - subtorre
       - torre_id
+      - ano_limite
     additionalProperties: false
   projeto:
     properties:
@@ -3314,6 +3318,8 @@ definitions:
       valor_total_proj:
         type: number
         format: double
+      descricao:
+        type: string
     required:
       - classificacao_geral
       - familia
@@ -3326,6 +3332,7 @@ definitions:
       - regiao
       - sistema
       - valor_total_proj
+      - descricao
     additionalProperties: false
   LimiteGrafico:
     properties:
