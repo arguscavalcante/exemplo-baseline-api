@@ -3265,13 +3265,13 @@ definitions:
     properties: {}
   Torre:
     properties:
-      Descricao_Torre:
+      descricao_torre:
         type: string
-      Torre:
+      torre:
         type: string
     required:
-      - Descricao_Torre
-      - Torre
+      - descricao_torre
+      - torre
     additionalProperties: false
   SubTorre:
     properties:
@@ -3294,6 +3294,8 @@ definitions:
   projeto:
     properties:
       classificacao_geral:
+        type: string
+      descricao:
         type: string
       familia:
         type: string
@@ -3318,10 +3320,9 @@ definitions:
       valor_total_proj:
         type: number
         format: double
-      descricao:
-        type: string
     required:
       - classificacao_geral
+      - descricao
       - familia
       - fase
       - gerente
@@ -3332,7 +3333,6 @@ definitions:
       - regiao
       - sistema
       - valor_total_proj
-      - descricao
     additionalProperties: false
   LimiteGrafico:
     properties:
@@ -3412,14 +3412,14 @@ definitions:
     additionalProperties: false
   ClassGeral:
     properties:
-      ClassGeral_id:
-        type: string
-      Descricao:
-        type: string
-      Baseline:
+      baseline:
         type: boolean
+      classgeral_id:
+        type: string
+      descricao:
+        type: string
     required:
-      - ClassGeral_id
+      - classgeral_id
     additionalProperties: false
 basePath: /api
 swagger: '2.0'

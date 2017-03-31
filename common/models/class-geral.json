@@ -7,20 +7,20 @@
     "validateUpsert": true
   },
   "properties": {
-    "ClassGeral_id": {
+    "baseline": {
+      "type": "boolean",
+      "required": false,
+      "index": true
+    },
+    "classgeral_id": {
       "type": "string",
       "id": true,
       "required": true,
       "index": true
     },
-    "Descricao": {
+    "descricao": {
       "type": "string",
       "required": false
-    },
-    "Baseline": {
-      "type": "boolean",
-      "required": false,
-      "index": true
     }
   },
   "validations": [],

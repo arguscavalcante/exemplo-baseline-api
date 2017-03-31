@@ -7,11 +7,11 @@
     "validateUpsert": true
   },
   "properties": {
-    "Descricao_Torre": {
+    "descricao_torre": {
       "type": "string",
       "required": true
     },
-    "Torre": {
+    "torre": {
       "type": "string",
       "id": true,
       "required": true,

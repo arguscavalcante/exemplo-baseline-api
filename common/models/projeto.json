@@ -12,6 +12,10 @@
       "type": "string",
       "required": true
     },
+    "descricao": {
+      "type": "string",
+      "required": true
+    },
     "familia": {
       "type": "string",
       "required": true,
@@ -19,7 +23,8 @@
     },
     "fase": {
       "type": "string",
-      "required": true
+      "required": true,
+      "index": true
     },
     "gerente": {
       "type": "string",
@@ -56,10 +61,6 @@
     },
     "valor_total_proj": {
       "type": "number",
-      "required": true
-    },
-    "descricao": {
-      "type": "string",
       "required": true
     }
   },
