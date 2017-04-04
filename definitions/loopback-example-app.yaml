@@ -3345,8 +3345,7 @@ definitions:
         type: string
       id:
         description: id limite grafico
-        type: number
-        format: double
+        type: string
       torre:
         description: torre que ocorre a variação
         type: string

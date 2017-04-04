@@ -19,7 +19,7 @@
       "description": "familia que representa o valor do limite"
     },
     "id": {
-      "type": "number",
+      "type": "string",
       "id": true,
       "required": true,
       "description": "id limite grafico"
