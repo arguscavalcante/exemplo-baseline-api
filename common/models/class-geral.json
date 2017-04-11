@@ -21,6 +21,11 @@
     "descricao": {
       "type": "string",
       "required": false
+    },
+    "classgeral_pai": {
+      "type": "string",
+      "required": false,
+      "index": true
     }
   },
   "validations": [],

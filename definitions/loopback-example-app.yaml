@@ -3417,6 +3417,8 @@ definitions:
         type: string
       descricao:
         type: string
+      classgeral_pai:
+        type: string
     required:
       - classgeral_id
     additionalProperties: false
