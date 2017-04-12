@@ -3415,8 +3415,6 @@ definitions:
         type: boolean
       classgeral_id:
         type: string
-      descricao:
-        type: string
       classgeral_pai:
         type: string
     required:

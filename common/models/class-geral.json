@@ -18,10 +18,6 @@
       "required": true,
       "index": true
     },
-    "descricao": {
-      "type": "string",
-      "required": false
-    },
     "classgeral_pai": {
       "type": "string",
       "required": false,
