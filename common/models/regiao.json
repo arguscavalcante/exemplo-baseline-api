@@ -15,7 +15,7 @@
     "familia": {
       "type": "string",
       "id": false,
-      "required": true,
+      "required": false,
       "index": true,
       "description": "familia"
     },
@@ -28,7 +28,7 @@
     "regiao": {
       "type": "string",
       "id": false,
-      "required": true,
+      "required": false,
       "index": true,
       "description": "regiao"
     },
@@ -36,7 +36,7 @@
       "type": [
         "string"
       ],
-      "required": false,
+      "required": true,
       "description": "vetor de sistemas"
     }
   },

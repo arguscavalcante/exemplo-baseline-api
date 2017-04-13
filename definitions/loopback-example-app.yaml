@@ -3405,9 +3405,8 @@ definitions:
         items:
           type: string
     required:
-      - familia
       - id_regiao
-      - regiao
+      - sistemas
     additionalProperties: false
   ClassGeral:
     properties:
