@@ -36,7 +36,7 @@
       "type": [
         "string"
       ],
-      "required": true,
+      "required": false,
       "description": "vetor de sistemas"
     }
   },
