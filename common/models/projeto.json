@@ -62,6 +62,10 @@
     "valor_total_proj": {
       "type": "number",
       "required": true
+    },
+    "hitorico":{
+      "type":"boolean",
+      "required": false
     }
   },
   "validations": [],
